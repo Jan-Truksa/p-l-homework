@@ -10,41 +10,41 @@ public class PigLatinConverterTest {
     @Test
     void consonantTest() {
         final String pigLatinText = new PigLatinConverter().apply("Hello");
-        assertEquals(pigLatinText,"Ellohay");
+        assertEquals("Ellohay", pigLatinText);
     }
 
     @Test
     void vowelTest() {
         final String pigLatinText = new PigLatinConverter().apply("apple");
-        assertEquals(pigLatinText,"appleway");
+        assertEquals("appleway", pigLatinText);
     }
 
     @Test
     void endsWithWayTest() {
         final String pigLatinText = new PigLatinConverter().apply("stairway");
-        assertEquals(pigLatinText,"stairway");
+        assertEquals("stairway", pigLatinText);
     }
 
     @Test
     void punctuationTest() {
         final String pigLatinText = new PigLatinConverter().apply("can’t");
         final String pigLatinOtherText = new PigLatinConverter().apply("end.");
-        assertEquals(pigLatinText,"antca’y");
-        assertEquals(pigLatinOtherText,"endway.");
+        assertEquals("antca’y", pigLatinText);
+        assertEquals("endway.", pigLatinOtherText);
     }
 
     @Test
     void hyphensTest() {
         final String pigLatinText = new PigLatinConverter().apply("this-thing");
-        assertEquals(pigLatinText,"histay-hingtay");
+        assertEquals("histay-hingtay", pigLatinText);
     }
 
     @Test
     void capitalizationTest() {
         final String pigLatinText = new PigLatinConverter().apply("Beach");
         final String pigLatinOtherText = new PigLatinConverter().apply("McCloud");
-        assertEquals(pigLatinText,"Eachbay");
-        assertEquals(pigLatinOtherText,"CcLoudmay");
+        assertEquals("Eachbay",pigLatinText);
+        assertEquals("CcLoudmay", pigLatinOtherText);
     }
 
 }
